@@ -1,5 +1,7 @@
 <%@ page language="java" import="java.util.List" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isELIgnored="false"%>
+    
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,30 +10,20 @@
 </head>
 <body>
       <h1>This Is a Home Page</h1>
-     <%
-       String name = (String) request.getAttribute("name");
-       Integer id = (Integer) request.getAttribute("id");
-       List<String> myf = (List<String>) request.getAttribute("friends");
-     %>
+   
+     <h1>Name is ${name} </h1>
+     <h2>Name is ${id }</h2>
      
-     <h1>Name is <%=name %></h1>
-     <h2>Name is <%=id %></h2>
-     
-     
-        <h2>My Chati Bati Friends</h2>
-     <%
-  
-     for(String s:myf){
-    	 
-    	
-         %>
-         
+       
+    <h2>My Chati Bati Friends</h2>
+    <ul>
+    
+        <c:forEach var="friend" items="${friends}">
         
-         <ul>
-            <li><%=s %></li>
-            
-         </ul>
-      <%} %>
+           <li>${friend}</li>
+        
+        </c:forEach>
+    </ul>
     
      
 </body>
