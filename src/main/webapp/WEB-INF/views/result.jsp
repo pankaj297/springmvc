@@ -12,7 +12,7 @@
 <body class="bg-light">
   <div class="container mt-5">
     <h3 class="mb-4">Submitted Details</h3>
-
+     <h4 class="text-success" > ${msg}</h4>
     <table class="table table-bordered table-striped">
         <tr>
             <th>Name</th>
