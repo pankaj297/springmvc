@@ -29,6 +29,12 @@ public class FormController {
 	@PostMapping("/submitForm") 
 	public String submitForm(@ModelAttribute User user, Model model) {
 		System.out.println(user);
+		
+		//Redirect perfix
+//		if(user.getCountry().isBlank()) {
+//			return "redirect:/form";
+//		}
+		
 		int cUser = this.userService.createUser(user);
 		model.addAttribute("msg", "User created Successfully with Id :" + cUser);
 		return "result"; //jsp ouput page

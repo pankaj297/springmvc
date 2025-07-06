@@ -15,7 +15,7 @@
  
   </head>
   <body style="background-color: #f0f8ff;">
-    <h1>Hello, world!</h1>
+  <!--   <h1>Hello, world!</h1> -->
     
     <div class="container mt-4">
     <h3 class="text-center">${head}</h3>
